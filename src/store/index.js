@@ -27,8 +27,8 @@ export default createStore({
     setMessage(state, value) {
       state.message = value;
     },
-    setProduct(state, values) {
-      state.catalogues = values;
+    setProducts(state, values) {
+      state.products = values;
     },
     setItem(state, value) {
       state.product = value;

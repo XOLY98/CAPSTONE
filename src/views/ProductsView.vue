@@ -1,29 +1,22 @@
 <template>
     <div class="products">
-
         <h1>Products</h1>
-    
         <div class="row gap-3">
-    
             <div v-if="SpinnerComp">
                 <SpinnerComp/>
             </div>
-    
-                
+
             <div class="card" style="width: 18rem ;" v-else  v-for="item in Products" :key="item.prodID" >
                  <img :src="item.imgURL" class="card-img-top" alt="...">
                  <div class="row card-body">
                    <h5 class="card-title">{{item.prodName}}</h5>
                    <p class="card-text"> {{item.price}}</p>
                    <p class="card-text">{{item.prodDescription}}</p>
-                   <router-link to="/SingleProd"><a class="btn btn-outline-success" >See more</a></router-link>
-                   <router-link to="/cart"><a class="btn btn-outline-success" >Add to Cart</a></router-link>
+                   <router-link to="/"><a class="btn" >See more</a></router-link>
+                   <router-link to="/cart"><a class="btn" >Add to Cart</a></router-link>
                  </div>
-               
             </div>
-    
         </div>
-    
     </div>
     <SpinnerComp/>
 </template>
@@ -47,6 +40,23 @@ export default {
 };
 </script>
 <style scoped>
+div.row{
+    margin-left: 12px;
+}
+.products{
+margin-top: 190px;
+margin-bottom: 50px;
+margin-right: 20px;
+}
+.card{
+    background-color: #6A4C2E;
+    opacity: 1;
+    box-shadow:  #2F1500 5px 5px 5px;
+    height: 30rem;
+    margin-bottom:25px;
+    margin-top: 25px;
+    
+}
 .card-text{
     color:white;
 
@@ -71,6 +81,12 @@ h1{
     div.row {
         transform: translateX(60%);
     }
+}
+.btn{
+    border: solid #E3BC94;
+    color: #E3BC94;
+} .btn a :hover{
+    color:#E3BC94;
 }
 
 </style>
