@@ -1,31 +1,8 @@
 <template>
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="1000">
-        <img src="https://i.postimg.cc/QdXwS7V1/Xhosa-wedding-dress-768x878.png" class="d-block rounded mx-auto d-block w-100 h-100%" alt="">
-      </div>
-      <div class="carousel-item" data-bs-interval="1000">
-        <img src="https://i.postimg.cc/ZnzfFZQL/beads-removebg-preview.png" class="d-block rounded mx-auto d-block w-100 h-100%" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="1000">
-        <img src="https://i.postimg.cc/6QTb9mz5/heeee.jpg" class="d-block rounded mx-auto d-block w-100 h-100%" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="1000">
-        <img src="https://i.postimg.cc/tTxr6nLK/sheee.jpg" class="d-block rounded mx-auto d-block w-100 h-100%" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="1000">
-        <img src="https://i.postimg.cc/brfcs3X7/carohhhh.jpg" class="d-block rounded mx-auto d-block w-100 h-100%" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  
+
+  <div></div>
+  
 </template>
 
 <script>
@@ -36,6 +13,101 @@
 <style scoped>
 img{
   height: 550px;
+}
+
+.main{
+  height:100vh;
+  width:50%;  
+  display:flex;
+  text-align:center;
+}
+h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 4rem;
+}
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: #1D3557;
+}
+
+
+#spare-time{
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1rem;
+  margin-top: 0;
+  color: #A8DADC;
+  
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;  
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -4rem;    
+  }
+  50%{
+    top: -8rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 2.125rem;
+}
+  
+  .roller{
+  height: 2.6rem; 
+  line-height: 2.125rem;  
+  }
+  
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .roller #rolltext {  
+  animation: slide-mob 5s infinite;  
+}
+  
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;    
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
 }
 
 </style>

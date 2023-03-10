@@ -1,8 +1,8 @@
 <template>
   <div> 
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <img alt="logo" src="https://i.postimg.cc/bwnns8Dd/Screenshot-2023-03-09-125334-removebg-preview.png" height="120" width="150">
+    <nav class="navbar navbar-expand-lg fixed-top ">
+      <div class="container-fluid ">
+        <img alt="logo" src="https://i.postimg.cc/XY69DLQJ/looooooooooooooooooooooooooooooo.png" height="125" width="100">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,27 +12,27 @@
               <router-link to="/">HOME</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/admin">ADMIN</router-link>
+              <router-link to="/admin"><i class="fa-sharp fa-solid fa-unlock"></i>Admin</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/products">PRODUCTS</router-link>
+              <router-link to="/products"><i class="fa-sharp fa-solid fa-clothes-hanger"></i>Products</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/contact" class="contact">CONTACT</router-link>
+              <router-link to="/contact" class="contact"><i class="fa-sharp fa-solid fa-envelope"></i>Contact</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/login" class="login">LOGIN</router-link>
+              <router-link to="/login" class="login"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/register" class="register">REGISTER</router-link>
+              <router-link to="/register" class="register"><i class="fa-sharp fa-solid fa-id-card"></i>Register</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/cart" class="cart">CART</router-link>
+              <router-link to="/cart" class="cart"><i class="fa-solid fa-cart-shopping"></i>Cart</router-link>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-E3BC94" type="submit">Search</button>
+            <button class="btn btn-outline-E3BC94" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
       </div>
@@ -54,7 +54,8 @@ export default {
 -moz-osx-font-smoothing: grayscale;
 text-align: center;
 color: #2c3e50;
-text-transform: uppercase;
+opacity: 0.7;
+box-shadow:#E3BC94 5px 5px 5px ;
 }
 
 .container-fluid .router-link {
