@@ -12,27 +12,27 @@
               <router-link to="/">HOME</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/admin"><i class="fa-sharp fa-solid fa-unlock"></i>Admin</router-link>
+              <router-link to="/admin">Admin</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/products"><i class="fa-sharp fa-solid fa-clothes-hanger"></i>Products</router-link>
+              <router-link to="/products">Products</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/contact" class="contact"><i class="fa-sharp fa-solid fa-envelope"></i>Contact</router-link>
+              <router-link to="/contact" class="contact">Contact</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/login" class="login"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</router-link>
+              <router-link to="/login" class="login">Login</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/register" class="register"><i class="fa-sharp fa-solid fa-id-card"></i>Register</router-link>
+              <router-link to="/register" class="register">Register</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/cart" class="cart"><i class="fa-solid fa-cart-shopping"></i>Cart</router-link>
+              <router-link to="/cart" class="cart">Cart</router-link>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-E3BC94" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            <button class="btn btn-outline-E3BC94" type="submit">Search</button>
           </form>
         </div>
       </div>
