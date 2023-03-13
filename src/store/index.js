@@ -47,6 +47,17 @@ export default createStore({
         context.commit("setMessage", err);
       }
     },
+
+    async register (context, payload) {
+      const res = await axios.post(`${bedURL}Users`,payload);
+      const { results, err } = await res.data;
+      if (results) {
+        context.commit("setMessage", results);
+      } else {
+        context.commit("setMessage", err);
+      }
+    },
+
     async fetchProducts(context) {
       context.commit('showSpinner', true)
 

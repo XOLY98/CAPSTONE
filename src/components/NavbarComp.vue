@@ -21,10 +21,7 @@
               <router-link to="/contact" class="contact">Contact</router-link>
             </li>
             <li class="nav-item mx-3">
-              <router-link to="/login" class="login">Login</router-link>
-            </li>
-            <li class="nav-item mx-3">
-              <router-link to="/register" class="register">Register</router-link>
+              <router-link to="/register" class="register">Register&Login</router-link>
             </li>
             <li class="nav-item mx-3">
               <router-link to="/cart" class="cart">Cart</router-link>

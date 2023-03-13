@@ -80,7 +80,8 @@ margin-right: 20px;
 
 }
 .card{
-    background-color:none;
+    opacity: 0.5;
+    
      box-shadow:  #2F1500 5px 5px 5px;
     height: 30rem;
     margin-bottom:25px;
