@@ -49,7 +49,7 @@ export default createStore({
     },
 
     async register (context, payload) {
-      const res = await axios.post(`${bedURL}Users`,payload);
+      const res = await axios.post(`${bedURL}register`,payload);
       const { results, err } = await res.data;
       if (results) {
         context.commit("setMessage", results);

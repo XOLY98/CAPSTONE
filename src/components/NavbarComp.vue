@@ -15,6 +15,9 @@
               <router-link to="/admin">Admin</router-link>
             </li>
             <li class="nav-item mx-3">
+              <router-link to="/about">About</router-link>
+            </li>
+            <li class="nav-item mx-3">
               <router-link to="/products">Products</router-link>
             </li>
             <li class="nav-item mx-3">
@@ -44,15 +47,19 @@ export default {
 
 <style scoped>
 .navbar{
-  background-color:#2F1500;
+  position: fixed !important;
+  background-color:black;
   letter-spacing: 0.2rem;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-align: center;
 color: #2c3e50;
-opacity: 0.7;
-box-shadow:#E3BC94 5px 5px 5px ;
+opacity: 0.8;
+box-shadow:#E3BC94 5px 5px 10px ;
+}
+.navbar-toggler{
+  background-color: #E3BC94;
 }
 
 .container-fluid .router-link {
@@ -61,12 +68,12 @@ box-shadow:#E3BC94 5px 5px 5px ;
 
 .navbar a {
   font-weight: bold;
-  color: white;
+  color: whitesmoke;
   text-decoration: none;
 }
 
 .navbar a.router-link-exact-active {
-  color: #E3BC94;
+  color: E3BC94;
   word-spacing: 0.5rem;
   text-decoration: none;
 

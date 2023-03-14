@@ -1,6 +1,9 @@
 <template>
   <div>
-  </div>
+    <img src="https://i.postimg.cc/tJFmf2J2/bbbkkll-h-removebg-preview.png" alt="bbblkk">
+    
+</div>
+  
   <HomeComp/>
 </template>
 
@@ -13,3 +16,23 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+img{
+  height: 95vh;
+  width:50vw;
+  margin-top: 70px;
+}
+* {
+  box-sizing: border-box;
+}
+
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+</style>

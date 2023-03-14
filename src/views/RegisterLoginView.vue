@@ -4,7 +4,7 @@
       <div class="col">
   <div class="register-form text-center"> 
    <h1>Register</h1>
-  <form action="https://formspree.io/f/xoqzwqgn" method="POST" class="row g-3" @submit.prevent="register">
+  <form class="row g-3" @submit.prevent="register">
   <div class="col-md-4">
     <label for="validationDefault01" class="form-label">First name</label>
     <input type="text" class="form-control" id="validationDefault01" name="name" required v-model="payload.firstName">
@@ -92,11 +92,13 @@ setup(){
     gender:'',
     emailAdd:'',
     userPass:'',
+    
   };
   const store = useStore();
   const register =()=>{
     store.dispatch("register",payload);
     store.dispatch("fetchUsers");
+    console.log(payload);
   }
   const userMessage =
   computed(()=>store.state.message)
@@ -127,9 +129,7 @@ h1{
     transform: translateX(55%);
     box-shadow: #08172E 5px 5px 5px 5px;
     }
-    .register-form :hover{
-      opacity: 0.3;
-    }
+    
     .form-check-label{
       color:whitesmoke;
       text-align: center;
@@ -139,6 +139,7 @@ h1{
     }
     .myForms{
       display:grid;
+      margin-bottom: 0;
     }
     
     .login-form{
@@ -150,7 +151,5 @@ h1{
     box-shadow: #08172E 5px 5px 5px 5px;
     
     }
-    .login-form :hover{
-      opacity: 0.3;
-    }
+    
 </style>

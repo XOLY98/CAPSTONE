@@ -56,13 +56,15 @@
               </div>
             </form>
           </div>
-          <div class="Info col">
-         <p><i class="bi bi-buildings-fill"></i>Address: 314 IMAM RD <br>LANSDOWNE<br>7745</p>
-         <p>Contact:(021) 1233 562</p>
-         <p>Email: styletto's@mail.com</p>
-  
+          <div class="col">
+         <img src="https://i.postimg.cc/nzB47xpz/history.jpg" alt="his">  
           </div>
       </div>
+    </div>
+    <div class="info">
+      <p>Address: 314 IMAM RD <br>LANSDOWNE<br>7745</p>
+         <p>Contact:(021) 1233 562</p>
+         <p><i class="fa-sharp fa-solid fa-envelope"></i>Email: thetribe@gmail.com</p>
     </div>
   </template>
   
@@ -74,22 +76,23 @@
   </script>
   
   <style scoped>
-  
+  .container{
+  padding-bottom: 1rem;
+  }
   h1{
     color: white;
     text-transform: uppercase;
   }
   .formy{
-    background-color: #08172E;
-    width: 60%; 
+    
+    width: 50%; 
     padding: 2%;
-    margin-top: 195px;
+    margin-top: 115px;
   
-    box-shadow: #08172E 5px 5px 5px 5px;
   }
   
-  .Info{
-    margin-top: 260px;
+  .info{
+    margin-bottom:0;
   }
   
   .form-check-label{
@@ -102,8 +105,13 @@
   p{
     font-weight: bolder;
     font-style: italic;
-    font-size: x-large;
+    font-size: large;
+    color:whitesmoke;
     
+  }
+  img{
+    height: 70vh;
+    margin-top: 80px;
   }
       
   </style>

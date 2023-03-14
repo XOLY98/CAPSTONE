@@ -80,9 +80,7 @@ margin-right: 20px;
 
 }
 .card{
-    opacity: 0.5;
-    
-     box-shadow:  #2F1500 5px 5px 5px;
+    background-color: transparent;
     height: 30rem;
     margin-bottom:25px;
     margin-top: 25px;
@@ -111,13 +109,14 @@ h1{
 
 
 .btn{
-    border: solid #E3BC94;
+    border: solid 1px #E3BC94;
     color: #E3BC94;
-} .btn a :hover{
+    border-radius: none;
+} .btn  :hover{
     color:#E3BC94;
 }
 #carouselExampleInterval{
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 </style>
