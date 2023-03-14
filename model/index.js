@@ -25,7 +25,7 @@ class User {
         await compare(userPass, data[0].userPass, (cErr, cResult) => {
           if (cErr) throw cErr;
           //---create token--//
-          const jwToken = createaToken({
+          const jwToken = createToken({
             emailAdd,
             userPass,
           });
