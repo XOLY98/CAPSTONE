@@ -1,9 +1,8 @@
 <template>
-
     <div class="container text-center">
       <div class="row">
         <div class="formy col">
-            <h1>Contact Us</h1>  
+          <h1>Contact Us</h1>
             <form action="https://formspree.io/f/xoqzwqgn" method="POST" class="row g-3">
               <div class="col-md-4">
                 <label for="validationDefault01" class="form-label">First name</label>
@@ -14,30 +13,11 @@
                 <input type="text" class="form-control" id="validationDefault02" name="name" required>
               </div>
               <div class="col-md-4">
-                <label for="validationDefaultUsername" class="form-label">Username</label>
+                <label for="validationDefaultUsername" class="form-label">Email address</label>
                 <div class="input-group">
                   <span class="input-group-text" id="inputGroupPrepend2">@</span>
                   <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="name" required>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <label for="validationDefault03" class="form-label">City</label>
-                <input type="text" class="form-control" id="validationDefault03" name="name" required>
-              </div>
-              <div class="col-md-3">
-                <label for="validationDefault04" class="form-label">Province</label>
-                <select class="form-select" id="validationDefault04" name="name" required>
-                  <option selected disabled value="">Choose One</option>
-                  <option>Western Cape</option>
-                  <option>Eastern Cape</option>
-                  <option>Free State</option>
-                  <option>KwaZulu-Natal</option>
-                  <option>Limpopo</option>
-                  <option>Northern Cape</option>
-                  <option>North West</option>
-                  <option>Gauteng</option>
-                  <option>Mpumalanga</option>
-                </select>
               </div>
               <div class="col-md-3">
                 <label for="validationDefault05" class="form-label">Zip</label>
@@ -52,7 +32,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <button class="btn btn-outline-success" type="submit">Submit</button>
+                <button class="btn btn-outline-light" type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -62,9 +42,9 @@
       </div>
     </div>
     <div class="info">
-      <p>Address: 314 IMAM RD <br>LANSDOWNE<br>7745</p>
-         <p>Contact:(021) 1233 562</p>
-         <p><i class="fa-sharp fa-solid fa-envelope"></i>Email: thetribe@gmail.com</p>
+      <p><i class="fa-sharp fa-solid fa-building"></i> Address: 314 IMAM RD <br>LANSDOWNE<br>7745</p>
+         <p><i class="fa-solid fa-phone"></i> Contact:(021) 1233 562</p>
+         <p><i class="fa-sharp fa-solid fa-envelope"></i> Email: thetribe@gmail.com</p>
     </div>
   </template>
   
@@ -87,7 +67,7 @@
     
     width: 50%; 
     padding: 2%;
-    margin-top: 115px;
+    padding-top: 195px;
   
   }
   
@@ -110,8 +90,8 @@
     
   }
   img{
-    height: 70vh;
-    margin-top: 80px;
+    height: 80vh;
+    padding-top: 120px;
   }
       
   </style>

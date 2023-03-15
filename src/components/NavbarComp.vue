@@ -26,8 +26,9 @@
             <li class="nav-item mx-3">
               <router-link to="/register" class="register">Register&Login</router-link>
             </li>
+          
             <li class="nav-item mx-3">
-              <router-link to="/cart" class="cart">Cart</router-link>
+              <router-link to="/cart">Cart</router-link>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -40,8 +41,8 @@
   </div>
 </template>
 <script>
-export default {
-    
+export default{
+  
 }
 </script>
 

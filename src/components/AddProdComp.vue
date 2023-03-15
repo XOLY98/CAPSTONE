@@ -1,15 +1,15 @@
 <template>
     <div class="admin">
-
+      <h1>PRODUCTS</h1>
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">Image</th>
-        <th scope="col">Product Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">Product Description</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Delete</th>
+        <th scope="col">IMAGE</th>
+        <th scope="col">PRODUCT NAME</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">PRODUCT DESCRIPTION</th>
+        <th scope="col"><i class="fa-sharp fa-solid fa-pen-to-square"></i></th>
+        <th scope="col"><i class="fa-sharp fa-solid fa-trash"></i></th>
       </tr>
     </thead>
     <tbody v-for="item in Products" :key="item.prodID">
@@ -17,23 +17,22 @@
       <tr>
         <th scope="row"></th>
         <td> {{item.prodName}}</td>
-        <td>{{item.price}}</td>
+        <td>R{{item.price}}</td>
         <td>{{item.prodDescription}}</td>
-        <td><button
+        <td>
+
+          <button
           type="button"
-          class="btn btn-outline-success"
-          data-bs-toggle="modal"
-          data-bs-target="#hair-products"
+          class="btn btn-outline-light"
         >
-          Edit
+        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
         </button></td>
         <td><button
           type="button"
-          class="btn btn-outline-success"
-          data-bs-toggle="modal"
-          data-bs-target="#hair-products"
+          class="btn btn-outline-light"
+          
         >
-          Delete
+        <i class="fa-sharp fa-solid fa-trash"></i>
         </button></td>
      </tr>
     </tbody>
@@ -63,12 +62,28 @@ export default {
 .admin{
     padding-top: 7rem;
 }
+.table thead th{
+  color:whitesmoke;
+  font-size: larger;
+  text-align: center;
+}
+h1{
+  color:#E3BC94;
+  font-size:30px;
+  text-decoration: underline;
+  text-shadow: #E3BC94 5px 5px 5px ;
+}
     .table{
-      background-color: #08172E;
+      background-color:transparent;
       color:whitesmoke;
       width: 80%;
       margin-left: 9%;
-    
+      transform: translateX('30%') ;
+    }
+    .table :hover{
+      opacity: 0.9;
+      color:pink;
+      background-color: transparent;
     }
 
     button{
@@ -76,7 +91,8 @@ export default {
     }
 
     img{
-      width: 3vw;
-      height:3vh;
+      width: 3.5rem;
+      height:4rem;
+      border:solid whitesmoke 3px;
     }
 </style>
