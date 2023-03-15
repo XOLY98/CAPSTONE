@@ -65,4 +65,7 @@ route.delete('/product/:id',
     product.deleteProduct(req, res);
 })
 
+//----Cart----//
+
+
 module.exports = route;
