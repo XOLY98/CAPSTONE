@@ -30,7 +30,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
- <button class="btnn" type="button" href="/products">VIEW ALL</button>
+ <button class="btnn" type="button" to="/products">VIEW ALL</button>
   </section>
 
 </template>

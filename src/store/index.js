@@ -9,6 +9,7 @@ export default createStore({
     product: null,
     showSpinner: true,
     message: null,
+    loggedUser:null
   },
   getters: {
     getUsers:(state)=>state.users,
@@ -30,12 +31,18 @@ export default createStore({
     setProducts(state, values) {
       state.products = values;
     },
+    setProduct(state, product) {
+      state.product = product;
+    },
     setItem(state, value) {
       state.product = value;
     },
     showSpinner(state, value){
       state.showSpinner = value
-    }
+    },
+    setLoggedUser(state, value) {
+      state.user = value;
+    },
   },
   actions: {
     async fetchUsers(context) {
@@ -48,6 +55,35 @@ export default createStore({
       }
     },
 
+    async updateProduct(context,payload){
+      const res = await axios.put(`${bedURL}product/${payload.id}`,payload);
+      const { results, err } = await res.data;
+      if (results) {
+        context.commit("setProduct", results);
+      } else {
+        context.commit("setMessage", err);
+      
+    }},
+    async fetchSingleProduct(context,id) {
+      const res = await axios.get(`${bedURL}product/${id}`,);
+      const { results, err } = await res.data;
+      if (results) {
+        context.commit('setProduct', results[0])
+      } else {
+        context.commit('setMessage', err)
+      }
+    },
+    async updateUser(context,payload){
+      const res = await axios.put(`${bedURL}user/${payload.userID}`,payload);
+      const { result, err } = await res.data;
+      if (result) {
+        context.commit("setUsers", result);
+      } else {
+        context.commit("setMessage", err);
+      
+    }},
+
+
     async register (context, payload) {
       const res = await axios.post(`${bedURL}register`,payload);
       const { results, err } = await res.data;
@@ -57,6 +93,20 @@ export default createStore({
         context.commit("setMessage", err);
       }
     },
+
+    async login (context, payload) {
+      const res = await axios.post(`${bedURL}login`,payload);
+      const { results, err } = await res.data;
+      if (results) {
+        context.commit("setLoggedUser", results);
+        console.log(results);
+
+        context.commit("setMessage", results);
+      } else {
+        context.commit("setMessage", err);
+      }
+    },
+
 
     async fetchProducts(context) {
       context.commit('showSpinner', true)

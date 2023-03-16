@@ -5,14 +5,15 @@
                 <SpinnerComp/>
             </div>
 
-            <div class="card" style="width: 18rem  ;" v-else  v-for="item in Products" :key="item.prodID" >
+            <div class="card" style="width: 18rem  ;" v-else  v-for="item in Products" :key="item.id" >
                 <h5 class="card-title">{{item.prodName}}</h5>
                  <img :src="item.imgURL" class="card-img-top" alt="...">
                  <div class="row card-body">
                    
                    <p class="card-text">R{{item.price}}</p>
                    <p class="card-text">{{item.prodDescription}}</p>
-                   <router-link to="/"><a class="btn" >See more</a></router-link>
+                   <router-link :to="{name: 'singleprod' , params:{id: item.id}}">See more</router-link>
+
                    <router-link to="/cart"><a class="btn" >Add to Cart</a></router-link>
                  </div>
             </div>
@@ -20,8 +21,10 @@
     </div>
 
     <SpinnerComp/>
+    <SingleProdComp/>
 </template>
 <script>
+import SingleProdComp from "@/components/SingleProdComp.vue";
 import SpinnerComp from "@/components/SpinnerComp.vue";
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
@@ -37,7 +40,8 @@ export default {
             SpinnerComp
         };
     },
-    components: SpinnerComp
+    components:{SpinnerComp,
+    SingleProdComp}
 };
 </script>
 <style scoped>

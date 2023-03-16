@@ -27,7 +27,7 @@
     </div>
     <div class="col-md-4">
       <label for="validationDefault02" class="form-label">Password</label>
-      <input type="text" class="form-control" id="validationDefault02" name="name" required v-model="payload.userPass">
+      <input type="password" class="form-control" id="validationDefault02" name="name" required v-model="payload.userPass">
     </div>
     
     <div class="col-md-3">
