@@ -10,13 +10,10 @@ class User {
   //--login--//
   login(req, res) {
     const { emailAdd, userPass } = req.body;
-    const strQry = `SELECT    userID ,
-        firstName ,
-        lastName ,
-        gender ,
-        emailAdd ,
-        userPass,
-        userRole FROM Users WHERE emailAdd=${emailAdd}; `;
+    const strQry = `SELECT userID, firstName, lastName, gender, emailAdd, userPass, userRole 
+    FROM Users 
+    WHERE emailAdd='${emailAdd}'; `;
+
     db.query(strQry, async (err, data) => {
       if (err) throw err;
       if (!data || data == null) {
