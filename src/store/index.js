@@ -14,9 +14,9 @@ export default createStore({
   getters: {
     getUsers:(state)=>state.users,
 
-    showsSpinner(state) {
-      return state.showSpinner
-    }
+    // showsSpinner(state) {
+    //   return state.showSpinner
+    // }
   },
   mutations: {
     setUsers(state, values) {
@@ -34,14 +34,14 @@ export default createStore({
     setProduct(state, product) {
       state.product = product;
     },
-    setItem(state, value) {
+    setItem(state, value) { 
       state.product = value;
     },
     showSpinner(state, value){
       state.showSpinner = value
     },
     setLoggedUser(state, value) {
-      state.user = value;
+      state.loggedUser = value;
     },
   },
   actions: {
@@ -83,6 +83,20 @@ export default createStore({
       
     }},
 
+    
+    async addUser(context,payload){
+      const res = await axios.post(`${bedURL}user/${payload.userID}`,payload);
+      const { result, err } = await res.data;
+      if (result) {
+        context.commit("setUsers", result);
+      } else {
+        context.commit("setMessage", err);
+      
+    }},
+
+
+
+
 
     async register (context, payload) {
       const res = await axios.post(`${bedURL}register`,payload);
@@ -94,14 +108,15 @@ export default createStore({
       }
     },
 
+    
+
     async login (context, payload) {
       const res = await axios.post(`${bedURL}login`,payload);
-      const { results, err } = await res.data;
-      if (results) {
-        context.commit("setLoggedUser", results);
-        console.log(results);
-
-        context.commit("setMessage", results);
+      const { result, err } = await res.data;
+      console.log(result);
+      if (result) {
+        context.commit("setLoggedUser", result);
+        context.commit("setMessage", result);
       } else {
         context.commit("setMessage", err);
       }
@@ -116,10 +131,8 @@ export default createStore({
       if (results) {
         // console.log(results);
         context.commit("setProducts", results);
-        context.commit("showSpinner", false);
       } else {
         context.commit("setItem", err);
-        context.commit("showSpinner", true);
       }
     },
   },

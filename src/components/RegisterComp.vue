@@ -1,8 +1,7 @@
 <template>
-    <div class="myForms">
-      <div class="row">
-        <!-- REGISTER FORM -->
-        <div class="col">
+      
+       <!-- REGISTER FORM -->
+     <div class="col">
     <div class="register-form text-center"> 
      <h1>Register</h1>
     <form class="row g-3" @submit.prevent="register">
@@ -43,12 +42,10 @@
       </div>
     </div>
     <div class="col-12">
-      <button class="btn btn-outline-success" type="submit">Submit form</button>
+      <button class="btn btn-outline-light" type="submit">Submit form</button>
     </div>
   </form>
   </div>
-  </div>
-     </div>
   </div>
   </template>
   
@@ -98,14 +95,14 @@
     max-width: 100%;
   
   }
+  .col{
+    padding-top: 6rem;
+  }
       .register-form{
         background-color: transparent;
         opacity: 0.9;
-        width: 30vw; 
-        padding: 2%;
-      margin-top: 155px;
-      transform: translateX(40%);
-      box-shadow: #E3BC94 5px 5px 5px;
+        width: 50vw;
+        margin-top: 7rem;
       }
       
       .form-check-label{
@@ -115,22 +112,6 @@
       label{
         color: whitesmoke;
       }
-      .myForms{
-        display:grid;
-        margin-bottom: 0;
-        height: 100vh;
-      }
       
-      .login-form{
-        background-color: transparent;
-        width: 50vw; 
-        padding: 2%;
-      box-shadow: #E3BC94 5px 5px ;
-      transform: translateY(40%);
-     
-      }
-      div .col{
-        margin: 0;
-      }
       
   </style>

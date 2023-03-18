@@ -56,7 +56,7 @@ export default{
 -moz-osx-font-smoothing: grayscale;
 text-align: center;
 color: #2c3e50;
-opacity: 0.8;
+opacity: 0.5;
 box-shadow:#E3BC94 10px 10px 10px ;
 }
 .navbar-toggler{

@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Login form -->
-<div class="col">
+
     <div class="login-form text-center">
       <h1>Login</h1>
       <form  class="row g-3 container fluid" @submit.prevent="login" >
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-4">
           <label for="validationDefault02" class="form-label">PASSWORD</label>
-          <input type="password" class="form-control"  name="name" required payload.userPass>
+          <input type="password" class="form-control"  name="name" required v-model="payload.userPass">
         </div>
       
         <div class="col-12">
@@ -32,13 +32,13 @@
           <a href=""><router-link to="/register&login">Register</router-link></a>
         </div>
         <div class="row col-md-4">
-          <button class="btn btn-outline-light" type="submit">Submit form</button>
+          <button class="btn btn-outline-light center" type="submit">Submit form</button>
         </div>
       </form>
      
      </div>
   </div>
-   </div>
+  
 
 
 </template>
@@ -68,10 +68,8 @@ export default {
 .login-form{
   background-color: transparent;
   width: 50vw; 
-  padding: 2%;
-box-shadow: #E3BC94 5px 5px ;
-transform: translateX(90%);
-padding-top: 50px;
-
+}
+.row{
+  margin-top: 8rem;
 }
 </style>

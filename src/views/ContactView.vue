@@ -23,6 +23,10 @@
                 <label for="validationDefault05" class="form-label">Zip</label>
                 <input type="text" class="form-control" id="validationDefault05" name="number" required>
               </div>
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Message</label>
+                <input type="message" class="form-control" id="validationDefault02" name="name" required>
+              </div>
               <div class="col-12">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" name="text" required>
@@ -72,14 +76,41 @@
   }
   
   .info{
-    margin-bottom:0;
+    animation: 2s anim-lineUp ease-out infinite;
+  color:pink;
+  font-size:2rem;
+  font-family:"Copperplate","Lucida Handwriting";
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
   }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@media screen and (min-width: 300px) and (max-width:719px){
+  .lineUp{
+    font-size:1rem;
+  }
+}
   
   .form-check-label{
-    color:whitesmoke
+    color:whitesmoke;
+    font-family:"Copperplate","Lucida Handwriting";
   }
   .form-label{
-    color:whitesmoke
+    color:whitesmoke;
+    font-family:"Copperplate","Lucida Handwriting";
   }
   
   p{
