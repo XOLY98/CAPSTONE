@@ -2,13 +2,13 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <img v-bind:src="item.imgURL" class="card-img-top" alt="item"  style="height:25rem; width:20rem;">
+        <img :src="item?.imgURL" class="card-img-top" alt="item"  style="height:25rem; width:20rem;">
     </div>
         <div class="col" >
-          <h2>{{item.prodName }}</h2>
-          <p><i class="fa-sharp fa-solid fa-tags"></i>  Price: R{{ item.price }}</p>
-          <p><i class="fa-sharp fa-solid fa-barcode"></i> Description: {{ item.prodDescription }}</p>
-          <p><em><i class="fa-sharp fa-solid fa-bag-shopping"></i> {{ item.prodQuantity }} left in stock</em></p>
+          <h2>{{item?.prodName }}</h2>
+          <p><i class="fa-sharp fa-solid fa-tags"></i>  Price: R{{ item?.price }}</p>
+          <p><i class="fa-sharp fa-solid fa-barcode"></i> Description: {{ item?.prodDescription }}</p>
+          <p><em><i class="fa-sharp fa-solid fa-bag-shopping"></i> {{ item?.prodQuantity }} left in stock</em></p>
           <!-- <router-link to="/singleProd"></router-link> -->
           <button @click="addToCart" class="btn btn-outline-light">Add to Cart</button>
         </div>

@@ -26,7 +26,6 @@
             <li class="nav-item mx-3">
               <router-link to="/register&login" class="register"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Register&Login</router-link>
             </li>
-          
             <li class="nav-item mx-3">
               <router-link to="/cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i></router-link>
             </li>

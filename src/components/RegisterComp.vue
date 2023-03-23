@@ -30,8 +30,8 @@
     </div>
     
     <div class="col-md-3">
-      <label for="validationDefault05" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="validationDefault05" name="number" required>
+      <label for="validationDefault05" class="form-label">URL</label>
+      <input type="image" class="form-control" id="validationDefault05" name="Picture" required  v-model="payload.imgURL">
     </div>
     <div class="col-12">
       <div class="form-check">
@@ -62,6 +62,7 @@
       gender:'',
       emailAdd:'',
       userPass:'',
+      imgURL:''
     };
     const store = useStore();
     const register =()=>{
@@ -89,20 +90,15 @@
     color: white;
     text-transform: uppercase;
   }
-  .row{
-    display: flex;
-    width: auto;
-    max-width: 100%;
   
-  }
-  .col{
-    padding-top: 6rem;
-  }
+  
       .register-form{
         background-color: transparent;
         opacity: 0.9;
         width: 50vw;
         margin-top: 7rem;
+        height:100vh;
+        
       }
       
       .form-check-label{
@@ -112,6 +108,7 @@
       label{
         color: whitesmoke;
       }
+      
       
       
   </style>

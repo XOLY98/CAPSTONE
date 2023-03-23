@@ -17,20 +17,18 @@
         <div class="row card-body">
           <p class="card-text">R{{ item.price }}</p>
           <p class="card-text">{{ item.prodDescription }}</p>
-          <router-link :to="{ name: 'singleprod', params: { id: item.id } }"
+          <button class="btn btn-outline-light"><router-link :to="{ name: 'singleprod', params: { id: item.id } }"
             >See more</router-link
-          >
+          ></button>
 
-          <router-link to="/cart"><a class="btn">Add to Cart</a></router-link>
+          <button class="btn btn-outline-light"><router-link :to="{ name: 'cart', params: { id: item.id } }">Add to Cart</router-link></button>
         </div>
       </div>
     </div>
   </div>
 
-  <SingleProdComp />
 </template>
 <script>
-import SingleProdComp from "@/components/SingleProdComp.vue";
 import SpinnerComp from "@/components/SpinnerComp.vue";
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
@@ -46,7 +44,7 @@ export default {
       SpinnerComp,
     };
   },
-  components: { SpinnerComp, SingleProdComp },
+  components: { SpinnerComp },
 };
 </script>
 <style scoped>
@@ -67,6 +65,7 @@ export default {
   margin-bottom: 25px;
   margin-top: 25px;
   display: inline-block;
+  box-shadow: #e3bc94 3px;
 
 }
 .card-text {
