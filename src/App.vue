@@ -1,7 +1,15 @@
 <template>
+<div class="social">
+  <a href=""><i class="fa-brands fa-facebook-f fa-beat-fade"></i></a>
+</div>
+
+
+
+
   <NavbarComp/>
   <router-view/>
   <FooterComp/>
+  
   
 </template>
 <script>
@@ -39,4 +47,6 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+
 </style>

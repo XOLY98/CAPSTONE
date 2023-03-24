@@ -8,6 +8,7 @@
           <h2>{{item?.prodName }}</h2>
           <p><i class="fa-sharp fa-solid fa-tags"></i>  Price: R{{ item?.price }}</p>
           <p><i class="fa-sharp fa-solid fa-barcode"></i> Description: {{ item?.prodDescription }}</p>
+          <p> Category: {{ item?.category }}</p>
           <p><em><i class="fa-sharp fa-solid fa-bag-shopping"></i> {{ item?.prodQuantity }} left in stock</em></p>
           <!-- <router-link to="/singleProd"></router-link> -->
           <button @click="addToCart" class="btn btn-outline-light">Add to Cart</button>

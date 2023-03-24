@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cart">
         <h1>this is checkout</h1>
     </div>
     <CartComp/>
@@ -12,6 +12,8 @@ export default {
 }
 }
 </script>
-<style>
-    
+<style scoped>
+   .cart{
+    height: 100vh;
+   } 
 </style>

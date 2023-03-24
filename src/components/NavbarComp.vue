@@ -29,10 +29,13 @@
             <li class="nav-item mx-3">
               <router-link to="/cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i></router-link>
             </li>
+            <li class="nav-item mx-3">
+              <router-link to="/userprofile"><i class="fa-solid fa-user fa-beat"></i></router-link>
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-E3BC94" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            <button class="btn btn-outline-light" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
       </div>
@@ -55,7 +58,7 @@ export default{
 -moz-osx-font-smoothing: grayscale;
 text-align: center;
 color: #2c3e50;
-opacity: 0.5;
+opacity: 1;
 box-shadow:#E3BC94 10px 10px 10px ;
 }
 .navbar-toggler{

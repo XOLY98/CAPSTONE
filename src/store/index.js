@@ -55,7 +55,15 @@ export default createStore({
         context.commit("setMessage", err);
       }
     },
-
+    async fetchUser(context) {
+      const res = await axios.get(`${bedURL}User`);
+      const { result, err } = await res.data;
+      if (result) {
+        context.commit("setloggedUser", result);
+      } else {
+        context.commit("setMessage", err);
+      }
+    },
     async updateProduct(context, payload) {
       const res = await axios.put(`${bedURL}product/${payload.id}`, payload);
       const { results, err } = await res.data;
@@ -65,11 +73,20 @@ export default createStore({
         context.commit("setMessage", err);
       }
     },
-    async deleteUser(context, payload) {
-      const res = await axios.delete(`${bedURL}user/${payload.id}`, payload);
+    async deleteUser(context, id) {
+      const res = await axios.delete(`${bedURL}/user/${id}`);
       const { results, err } = await res.data;
       if (results) {
-        context.commit("setProduct", results);
+        context.commit("setUsers", results);
+      } else {
+        context.commit("setMessage", err);
+      }
+    },
+    async deleteProduct(context, id) {
+      const res = await axios.delete(`${bedURL}/product/${id}`);
+      const { results, err } = await res.data;
+      if (results) {
+        context.commit("setProducts", results);
       } else {
         context.commit("setMessage", err);
       }
@@ -94,11 +111,20 @@ export default createStore({
       }
     },
 
-    async addUser(context, payload) {
-      const res = await axios.post(`${bedURL}user/${payload.userID}`, payload);
+    async createUser(context, payload) {
+      const res = await axios.post(`${bedURL}register`, payload);
       const { result, err } = await res.data;
       if (result) {
         context.commit("setUsers", result);
+      } else {
+        context.commit("setMessage", err);
+      }
+    },
+    async addProduct(context, payload) {
+      const res = await axios.post(`${bedURL}/product`, payload);
+      const { result, err } = await res.data;
+      if (result) {
+        context.commit("setProducts", result);
       } else {
         context.commit("setMessage", err);
       }

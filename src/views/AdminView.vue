@@ -31,7 +31,7 @@
           </td>
           <!-- DELETE button -->
           <td>
-            <button type="button" class="btn btn-outline-light">
+            <button type="button" class="btn btn-outline-light " v-on:click="deleteProduct(item.id)">
               <i class="fa-sharp fa-solid fa-trash"></i>
             </button>
           </td>
@@ -86,7 +86,6 @@
     >
       ADD USER
     </button>
-
     <AddUserComp modalID="addUserModal" />
     
     <button
@@ -97,7 +96,6 @@
     >
      ADD PRODUCT
     </button>
-
     <AddProdComp modalID="addProductModal"  />
   </div>
 
@@ -128,7 +126,8 @@ export default {
   },
     methods: {
       deleteUser(id){
-        this.$store.dispatch("deleteUser",id)
+        this.$store.dispatch("deleteProduct",id);
+        this.$store.dispatch("getProducts");
       }
   },
   components: { AddProdComp, AddUserComp },
@@ -141,6 +140,7 @@ export default {
 }
 .admin {
   padding-top: 7rem;
+  width: 100vw;
 }
 .table thead th {
   color: whitesmoke;

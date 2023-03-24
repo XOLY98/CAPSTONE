@@ -2,9 +2,9 @@
   <div>
     <!-- Login form -->
     <!-- v-if="login && user == null && !spinner" -->
-    <div class="login-form text-center">
-      <h1>Login</h1>
-      <form @submit.prevent="logins" class="row g-3 container fluid">
+    <div class="login-form ">
+      <form @submit.prevent="logins" class="row g-3 container fluid text-center">
+        <h1>Login</h1>
         <div class="col-md-4">
           <label for="validationDefaultPassword" class="form-label"
             >EMAIL ADDRESS</label
@@ -48,19 +48,17 @@
             </label>
           </div>
         </div>
-        <div class="row col-md-4">
-          <button class="btn btn-outline-light center" type="submit">
-            Submit form
-          </button>
+        <div v-if="user !== null && !spinner" class="loggedIn">
+          <h1>you're logged in<i class="fa-solid fa-face-smile"></i></h1>
+          <Logout />
         </div>
+        <button class="btn btn-outline-light center" type="submit">
+          LOGIN
+        </button>
+        <button type="buttonReg" class="btn btn-light">
+          <router-link to="/register&login">Register</router-link>
+        </button>
       </form>
-      <button type="button" class="btn btn-dark">
-        <router-link to="/register&login">Register</router-link>
-      </button>
-      <div v-if="user !== null && !spinner" class="loggedIn">
-        <h1>you're logged in<i class="fa-solid fa-face-smile"></i></h1>
-        <Logout />
-      </div>
       <div>
         <button type="button" class="btn btn-dark">
           <LogOutComp />
@@ -82,9 +80,10 @@ export default {
   setup() {
     const store = useStore();
     const router = useRouter();
-    let spinner = ref(false);
+    let spinner = ref(true);
     let login = ref(true);
-    const userMessage = computed(() => store.state.msg);
+    const userMessage = computed(() => store.state.message);
+    
     const LoggedUser = JSON.parse(localStorage.getItem("user"));
     let user =
       LoggedUser == null || LoggedUser == undefined ? null : LoggedUser;
@@ -93,13 +92,13 @@ export default {
       emailAdd: "",
       userPass: "",
     };
+   
+      
 
     function logins() {
-      spinner.value = !spinner.value;
       store.dispatch("login", this.payload);
       localStorage.setItem("user", JSON.stringify(store.state.user));
       // location.reload();
-      spinner.value = !spinner.value;
       // this.$router.push({name:'home', path:'/'}).then(() => location.reload())
       console.log(payload);
     }
@@ -112,6 +111,7 @@ export default {
       login,
       payload,
       spinner,
+     
     };
   },
   components: {
@@ -124,8 +124,15 @@ export default {
 .login-form {
   background-color: transparent;
   width: 50vw;
+  height: 100vh;
+  color:whitesmoke;
 }
 .row {
   margin-top: 8rem;
+  transform: translateX(50%);
+  
+}
+.router-link{
+  color: black;
 }
 </style>

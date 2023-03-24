@@ -5,7 +5,7 @@
       </div>
     <div class="row gap-3 col-12 center">
       
-
+     <h1>PRODUCTS</h1>
       <div
         class="card"
         style="width: 18rem"
@@ -17,6 +17,7 @@
         <div class="row card-body">
           <p class="card-text">R{{ item.price }}</p>
           <p class="card-text">{{ item.prodDescription }}</p>
+          <p class="card-text">{{ item.category}}</p>
           <button class="btn btn-outline-light"><router-link :to="{ name: 'singleprod', params: { id: item.id } }"
             >See more</router-link
           ></button>

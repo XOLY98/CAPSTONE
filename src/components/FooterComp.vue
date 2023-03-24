@@ -1,7 +1,7 @@
 <template>
 <footer>
 
-    <div class="row ">
+    <div class="row sticky-bottom">
 
         <div class="col-lg-12 d-flex align-items-center">
             <h6 class="m-auto p-3">&copy;Copyright The Tribe 2023. All rights reserved.</h6>

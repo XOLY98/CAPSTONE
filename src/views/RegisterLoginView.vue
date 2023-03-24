@@ -2,8 +2,8 @@
 <!-- REGISTER FORM -->
 <div class="col">
   <div class="register-form text-center"> 
-   <h1>Register</h1>
   <form class="row g-3" @submit.prevent="register">
+    <h1>Register</h1>
   <div class="col-md-4">
     <label for="validationDefault01" class="form-label">First name</label>
     <input type="text" class="form-control" id="validationDefault01" name="name" required v-model="payload.firstName">
@@ -29,8 +29,8 @@
   </div>
   
   <div class="col-md-3">
-    <label for="validationDefault05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationDefault05" name="number" required>
+    <label for="validationDefault05" class="form-label">UserRole</label>
+    <input type="text" class="form-control" id="validationDefault05" name="text" required v-model="payload.userRole">
   </div>
   <div class="col-12">
     <div class="form-check">
@@ -47,22 +47,11 @@
 </div>
 </div>
 
-
-
-
-
-
-
-
   <div class="forms">
- 
-  <div class="log">
-    <button type="button" class="btn  btn-dark">
+    <button type="button" class="btn  btn-light">
      <router-link to="/login">Login</router-link>
     </button>
     
-    </div>
-
     <div class="regi">
     <RegisterComp/>
   </div>
@@ -82,6 +71,7 @@ export default {
       gender:'',
       emailAdd:'',
       userPass:'',
+      userRole:''
     };
     const store = useStore();
     const register =()=>{
@@ -116,6 +106,7 @@ export default {
         opacity: 0.9;
         width: 50vw;
         margin-top: 7rem;
+        transform: translateY(10%);
       }
       
       .form-check-label{
@@ -125,6 +116,12 @@ export default {
       label{
         color: whitesmoke;
       }
-
+      .col{
+        height: 90vh;
+      }
+      form.row{
+        
+        transform: translateX(50%);
+      }
  
 </style>

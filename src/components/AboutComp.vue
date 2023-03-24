@@ -18,7 +18,10 @@
 </div>
 <div class="about us">
     <h2>ABOUT US</h2>
-    <p class="about">hjcljchjckkkcj</p>
+    <p class="about">THE TRIBE Africa is a South African beading brand founded in 2023 by Xolelwa Manqina. This was with the desire to explore beading design solutions that would be suitable for women.
+        Our initial vision was to create a modern Xhosa-inspired beading collection that would be suitable for this market. As a person that loves and embraces her tibe Xolelwa felt that he had to develop premium beading that celebrates traditional Xhosa aesthetics.<br>Along our journey into exploring astonishing traditional Xhosa beadwork patterns, symbolism and colours, we discovered that they would be the best source of inspiration for knitwear, which we then reinterpreted into modern knitwear.
+        THE TRIBE designs showcase the beauty, culture, language and aspiration of the Xhosa people. Evolved and amended in a modern way and a current design context it translates into a form that resonates with multiple fashion markets globally.
+        Our Brand Aspire to become a leading African lux, premium and mass heritage fashion & lifestyle brand.</p>
 </div>
 </template>
 

@@ -1,54 +1,10 @@
 <template>
   <div class="homepage">
     <div class="row">
-    <div class="col">
-    </div>0
-
-  <div class="col">
-    <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-mdb-target="#carouselExampleCrossfade"
-          data-mdb-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-mdb-target="#carouselExampleCrossfade"
-          data-mdb-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-mdb-target="#carouselExampleCrossfade"
-          data-mdb-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://i.postimg.cc/WbCxNYZW/shoe_xho__1_-removebg-preview.png" class="d-block w-100" alt="Wild Landscape"/>
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.postimg.cc/ZYf1g55h/diff_color__1_-removebg-preview.png" class="d-block w-100" alt="Camera"/>
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.postimg.cc/sDvtRCMG/beaded-sandal-xho__1_-removebg-preview.png" class="d-block w-100" alt="Exotic Fruits"/>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <img src="https://i.postimg.cc/tgLdYJ0w/hist.jpg">
     </div>
-  </div>
+<div class="social">
+  <a href=""><i class="fa-brands fa-facebook-f fa-beat-fade"></i></a>
 </div>
 </div>
   
@@ -63,7 +19,7 @@ export default{
 
 <style scoped>
 img{
-  height: 95vh;
+  height: 50vh;
   width:30vw;
   margin-top: 70px;
 }
@@ -80,8 +36,28 @@ div{
 #carouselExampleInterval{
   padding-top: 100px;
 }
-img{
-  height: 46%;
+.homepage{
+  height:100vh;
+}
+.social a{
+  display:grid;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  color: #a7d2cb;
+  border-radius: 35%;
+  color: whitesmoke;
+}
+.social a:hover{
+  outline-color: rgb(1, 0, 0);
+}
+.social{
+  display:inline;
+  flex-direction: column;
+  bottom: 45%;
+  right: 3%;
+  position: fixed;
+  transform: translateY(50%);
 }
 
 </style>
