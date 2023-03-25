@@ -36,7 +36,7 @@ export default {
     #container{
         padding-top: 70px;
         background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
-        background-repeat: no-repeat;
+        background-repeat: no-repeat !important;
         background-size: cover;
     }
     p{
@@ -46,6 +46,7 @@ export default {
     h1{
         font-size: 45px;
         color:#E3BC94;
+        text-decoration: underline solid;
     }
     .about{
         font-size: 1rem;
@@ -53,6 +54,6 @@ export default {
     h2{
         font-size: 40px;
         color:#E3BC94;
-        text-decoration: underline double white;
+        text-decoration: underline solid white;
     }
 </style>
