@@ -1,6 +1,6 @@
 <template>
-<div class="social">
-  <a href=""><i class="fa-brands fa-facebook-f fa-beat-fade"></i></a>
+<div class="">
+  
 </div>
 
 

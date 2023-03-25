@@ -44,6 +44,15 @@ export default createStore({
     setLoggedUser(state, value) {
       state.loggedUser = value;
     },
+    sorting:(state)=>{
+      state.products.sort((a,b)=>{
+        return a.price - b.price;
+      });
+      if (!state.asc){
+        state.products.reverse();
+      }
+      state.asc=!state.asc;
+    }
   },
   actions: {
     async fetchUsers(context) {

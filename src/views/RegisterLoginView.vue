@@ -1,5 +1,6 @@
 <template>
 <!-- REGISTER FORM -->
+
 <div class="col">
   <div class="register-form text-center"> 
   <form class="row g-3" @submit.prevent="register">
@@ -44,23 +45,15 @@
     <button class="btn btn-outline-light" type="submit">Submit form</button>
   </div>
 </form>
+<button type="button" class="btn  btn-light">
+  <router-link to="/login">Login</router-link>
+ </button>
 </div>
 </div>
-
-  <div class="forms">
-    <button type="button" class="btn  btn-light">
-     <router-link to="/login">Login</router-link>
-    </button>
-    
-    <div class="regi">
-    <RegisterComp/>
-  </div>
-</div>
-<SpinnerComp/>
 </template>
 <script>
-// import LoginComp from '@/components/LoginComp.vue'
-import SpinnerComp from '@/components/SpinnerComp.vue';
+
+
 import {computed} from '@vue/runtime-core';
   import {useStore  } from 'vuex';
 export default {
@@ -84,12 +77,12 @@ export default {
     return{
       payload,
       userMessage,
-      register
+      register,
+      
     }
   },
   components:{
-    // LoginComp,
-    SpinnerComp
+  
 }
 }
 </script>
@@ -105,7 +98,7 @@ export default {
         background-color: transparent;
         opacity: 0.9;
         width: 50vw;
-        margin-top: 7rem;
+        padding-top: 7rem;
         transform: translateY(10%);
       }
       
@@ -117,11 +110,19 @@ export default {
         color: whitesmoke;
       }
       .col{
-        height: 90vh;
-      }
+        height: 100vh;
+          height:100vh;
+          background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+          background-repeat:no-repeat ;
+          background-size: cover;
+        }
+      
       form.row{
         
         transform: translateX(50%);
+      }
+      .btn{
+        width:20rem;
       }
  
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <div id="everything">
     <div class="container text-center">
       <div class="row">
         <div class="formy col">
@@ -40,16 +41,19 @@
               </div>
             </form>
           </div>
-          <div class="col">
+          <div class="col formy2">
          <img src="https://i.postimg.cc/nzB47xpz/history.jpg" alt="his">  
           </div>
       </div>
-    </div>
-    <div class="info">
+      <div class="info">
       <p><i class="fa-sharp fa-solid fa-building"></i> Address: 314 IMAM RD <br>LANSDOWNE<br>7745</p>
-         <p><i class="fa-solid fa-phone"></i> Contact:(021) 1233 562</p>
-         <p><i class="fa-sharp fa-solid fa-envelope"></i> Email: thetribe@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> Contact:(021) 1233 562</p>
+      <p><i class="fa-sharp fa-solid fa-envelope"></i> Email: thetribe@gmail.com</p>
     </div>
+    </div>
+
+  </div>
+    
   </template>
   
   <script>
@@ -60,8 +64,15 @@
   </script>
   
   <style scoped>
+  #everything{
+    height: 125vh;
+    background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
   .container{
   padding-bottom: 1rem;
+  height: 100vh;
   }
   h1{
     color: white;
@@ -72,6 +83,13 @@
     width: 50%; 
     padding: 2%;
     padding-top: 195px;
+    height: 100vh;
+    
+  } 
+
+  .formy2{
+    
+    height: 100vh;
   
   }
   

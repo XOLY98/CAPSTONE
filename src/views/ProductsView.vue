@@ -1,11 +1,12 @@
 <template>
-  <div class="products">
+  <div class="wholething">
+  <div class="products" v-if="loggedUser">
+    <h1>PRODUCTS</h1>
+    <button  @click="sortingItems()" class="btn btn-outline-light ">Price Sorting</button>
     <div v-if="Products == undefined">
         <SpinnerComp />
       </div>
     <div class="row gap-3 col-12 center">
-      
-     <h1>PRODUCTS</h1>
       <div
         class="card"
         style="width: 18rem"
@@ -27,6 +28,7 @@
       </div>
     </div>
   </div>
+  </div>
 
 </template>
 <script>
@@ -45,15 +47,32 @@ export default {
       SpinnerComp,
     };
   },
+  computed: {
+    loggedUser() {
+      return this.$store.state.loggedUser;
+    },
+  },
+  methods:{
+      sortingItems(){
+        this.$store.commit("sorting");
+      }
+    },
   components: { SpinnerComp },
 };
 </script>
 <style scoped>
 .products {
   padding-top: 80px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   margin-right: 20px;
   transform: translateX(11%);
+    height:280vh;
+}
+.wholething{
+  background-image: url(https://i.postimg.cc/B6NMJRYM/brown_water_light_1872294820.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .card:hover {
@@ -82,19 +101,21 @@ img {
 }
 
 h1 {
-  color: #08172e;
+  color: whitesmoke;
   text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size:25px;
+  text-decoration:solid underline white;
+  text-transform:  uppercase;
 }
 
 .btn {
-  border: solid 1px #e3bc94;
-  color: #e3bc94;
-  border-radius: none;
+  border: solid 1px white;
+  color: white;
+  padding-top: 10px;
+  
 }
 .btn :hover {
-  color: #e3bc94;
+  color: whitesmoke;
 
 }
 #carouselExampleInterval {

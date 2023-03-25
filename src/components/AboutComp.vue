@@ -15,14 +15,13 @@
         Xhosa women smoking decorative pipes is a familiar sight in some areas of the Eastern Cape. The pipes are usually made from wood and often decorated with beads</p>
 </div>
 </div>
-</div>
-<div class="about us">
-    <h2>ABOUT US</h2>
+<h2>ABOUT US</h2>
     <p class="about">THE TRIBE Africa is a South African beading brand founded in 2023 by Xolelwa Manqina. This was with the desire to explore beading design solutions that would be suitable for women.
         Our initial vision was to create a modern Xhosa-inspired beading collection that would be suitable for this market. As a person that loves and embraces her tibe Xolelwa felt that he had to develop premium beading that celebrates traditional Xhosa aesthetics.<br>Along our journey into exploring astonishing traditional Xhosa beadwork patterns, symbolism and colours, we discovered that they would be the best source of inspiration for knitwear, which we then reinterpreted into modern knitwear.
         THE TRIBE designs showcase the beauty, culture, language and aspiration of the Xhosa people. Evolved and amended in a modern way and a current design context it translates into a form that resonates with multiple fashion markets globally.
         Our Brand Aspire to become a leading African lux, premium and mass heritage fashion & lifestyle brand.</p>
 </div>
+
 </template>
 
 <script>
@@ -36,6 +35,9 @@ export default {
     }
     #container{
         padding-top: 70px;
+        background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     p{
         font-style: italic;
@@ -46,10 +48,11 @@ export default {
         color:#E3BC94;
     }
     .about{
-        font-size: 20px;
+        font-size: 1rem;
     }
     h2{
         font-size: 40px;
         color:#E3BC94;
+        text-decoration: underline double white;
     }
 </style>

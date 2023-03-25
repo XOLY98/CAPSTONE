@@ -1,6 +1,6 @@
 <template>
   <!-- ADD PRODUCTS -->
-  <div class="admin">
+  <div class="admin" v-if="loggedUser">
     <h1>PRODUCTS</h1>
     <table class="table">
       <thead>
@@ -70,7 +70,7 @@
           </td>
 
           <td>
-            <button type="button" class="btn btn-outline-light">
+            <button type="button" class="btn btn-outline-light" v-on:click="deleteUser(item.userID)">
               <i class="fa-sharp fa-solid fa-trash"></i>
             </button>
           </td>
@@ -124,10 +124,19 @@ export default {
       Users,
     }
   },
+  computed: {
+    loggedUser() {
+      return this.$store.state.loggedUser;
+    },
+  },
     methods: {
-      deleteUser(id){
+      deleteProduct(id){
         this.$store.dispatch("deleteProduct",id);
-        this.$store.dispatch("getProducts");
+        this.$store.dispatch("fetchProducts");
+      },
+      deleteUser(id){
+        this.$store.dispatch("deleteUser",id);
+        this.$store.dispatch("fetchUsers");
       }
   },
   components: { AddProdComp, AddUserComp },
@@ -141,6 +150,10 @@ export default {
 .admin {
   padding-top: 7rem;
   width: 100vw;
+  padding-top: 70px;
+  background-image: url(https://i.postimg.cc/B6NMJRYM/brown_water_light_1872294820.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .table thead th {
   color: whitesmoke;

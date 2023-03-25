@@ -2,8 +2,47 @@
     <button type="button" class="btn  btn-dark">
         <router-link to="/login">Login</router-link>
        </button>
-       
+
         <div class="my_account" v-if="loggedUser">
+  
+          <section class="vh-100
+          ">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+                  <div class="card mb-3" style="border-radius: .5rem;">
+                    <div class="row g-0">
+                      <div class="col-md-4 gradient-custom text-center text-white"
+                        style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                        <img :src="loggedUser.userProfile"
+                          alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                        <h5>{{loggedUser.firstName}} {{loggedUser.lastName}}</h5>
+                        <p>{{loggedUser.userRole}}</p>
+                        <i class="far fa-edit mb-5"></i>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body p-4">
+                          <h6>{{loggedUser.gender}}</h6>
+                          <hr class="mt-0 mb-4">
+                          <div class="row pt-1">
+                            <div class="col-6 mb-3">
+                              <h6>Email</h6>
+                              <p class="text-muted">{{loggedUser.emailAdd}}</p>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-start">
+                            <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                            <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                            <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
             <div class="deleteBOX">
               <div class="delete_modal">
                 <h4>Are you sure you want to delete your account?</h4>
@@ -93,26 +132,6 @@
             </div>
             <div class="left">
               <div class="logged_user">
-                <div
-                  class="img"
-                  :style="{ backgroundImage: `url(${loggedUser.userProfile})` }"
-                ></div>
-                <h2 class="name">
-                  {{ loggedUser.firstName }} {{ loggedUser.lastName }}
-                </h2>
-                <div class="details">
-                  <h3>E-mail Address :</h3>
-                  <h3>{{ loggedUser.emailAdd }}</h3>
-                </div>
-                
-                <div class="details">
-                  <h3>Gender :</h3>
-                  <h3>{{ loggedUser.gender }}</h3>
-                </div>
-                <div class="details">
-                  <h3>Role :</h3>
-                  <h3>{{ loggedUser.userRole }}</h3>
-                </div>
                 <div class="buttons">
                   <button class="btn_edit" @click="showEdit()">
                     <i class="fa-solid fa-pen-to-square" ></i> Edit account
@@ -183,6 +202,12 @@ export default {
         color:antiquewhite;
     }
     .my_account{
-        height:10vh;
-    }
+        height:200vh;
+        width: 100vw;
+          padding-top: 70px;
+          background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+          background-repeat: no-repeat !important;
+          background-size: cover;
+      }
+    
 </style>

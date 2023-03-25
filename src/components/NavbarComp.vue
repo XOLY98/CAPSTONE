@@ -59,7 +59,7 @@ export default{
 text-align: center;
 color: #2c3e50;
 opacity: 1;
-box-shadow:#E3BC94 10px 10px 10px ;
+box-shadow:white 10px 10px 10px ;
 }
 .navbar-toggler{
   background-color: #E3BC94;

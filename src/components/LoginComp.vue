@@ -1,7 +1,6 @@
 <template>
   <div>
     <!-- Login form -->
-    <!-- v-if="login && user == null && !spinner" -->
     <div class="login-form ">
       <form @submit.prevent="logins" class="row g-3 container fluid text-center">
         <h1>Login</h1>
@@ -55,32 +54,27 @@
         <button class="btn btn-outline-light center" type="submit">
           LOGIN
         </button>
-        <button type="buttonReg" class="btn btn-light">
+        <button type="submit" class="btn btn-outline-light center">
           <router-link to="/register&login">Register</router-link>
+        </button>
+        <button type="button" class="btn btn-outline-light center">
+          <LogOutComp />
         </button>
       </form>
       <div>
-        <button type="button" class="btn btn-dark">
-          <LogOutComp />
-        </button>
       </div>
     </div>
   </div>
 
-  <SpinnerComp />
 </template>
 <script>
 import { useStore } from "vuex";
 import { ref } from "vue";
-import SpinnerComp from "@/components/SpinnerComp.vue";
-import { useRouter } from "vue-router";
 import { computed } from "@vue/runtime-core";
 import LogOutComp from "@/components/LogOutComp.vue";
 export default {
   setup() {
     const store = useStore();
-    const router = useRouter();
-    let spinner = ref(true);
     let login = ref(true);
     const userMessage = computed(() => store.state.message);
     
@@ -105,34 +99,45 @@ export default {
 
     return {
       user,
-      router,
       logins,
       userMessage,
       login,
       payload,
-      spinner,
+    
      
     };
   },
   components: {
-    SpinnerComp,
     LogOutComp,
   },
 };
 </script>
 <style scoped>
 .login-form {
-  background-color: transparent;
-  width: 50vw;
   height: 100vh;
   color:whitesmoke;
+  background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+  background-repeat:no-repeat ;
+  background-size: cover;
 }
 .row {
-  margin-top: 8rem;
-  transform: translateX(50%);
+  padding-top: 10rem;
+  transform: translateX(10%);
+  padding-bottom: 7rem;
   
 }
 .router-link{
   color: black;
 }
+.btn{
+  width:20rem;
+}
+.btn :hover{
+  background-color: whitesmoke;
+}
+h1{
+  font-size: 25px;
+  text-decoration: underline solid white;
+}
+
 </style>
