@@ -69,8 +69,8 @@ export default {
     height:280vh;
 }
 .wholething{
-  background-image: url(https://i.postimg.cc/B6NMJRYM/brown_water_light_1872294820.webp);
-  background-repeat: no-repeat;
+  background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+  background-repeat: no-repeat !important;
   background-size: cover;
 
 }

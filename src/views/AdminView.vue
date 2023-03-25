@@ -65,7 +65,7 @@
           <td>{{ item.emailAdd }}</td>
           <td>
             <button type="button" class="btn btn-outline-light">
-              <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+              <i class="fa-sharp fa-solid fa-user-pen"></i>
             </button>
           </td>
 
@@ -187,5 +187,8 @@ img {
   width: 3.5rem;
   height: 4rem;
   border: solid whitesmoke 3px;
+}
+.btn{
+  width: 4rem;
 }
 </style>

@@ -74,10 +74,6 @@ transform: translateX(-25rem) !important;
 }
 }
 
-
-
-
-
 .social a{
   display:grid;
   text-align: center;

@@ -27,7 +27,7 @@ export default {
 .row {
 background-color: black;
 opacity: 1;
-box-shadow: #E3BC94 10px 10px 10px;
+box-shadow: white 10px 10px 10px;
 }
 
 h6{

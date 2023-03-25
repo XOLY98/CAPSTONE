@@ -67,7 +67,7 @@
   #everything{
     height: 125vh;
     background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
-    background-repeat: repeat;
+    background-repeat: repeat !important;
     background-size: cover;
   }
   .container{

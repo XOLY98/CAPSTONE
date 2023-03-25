@@ -36,8 +36,15 @@
 </script>
 <style scoped>
 .container{
-    height:90vh
+    height:100vh;
+   
+          background-image: url(https://i.postimg.cc/tgQmsY5c/1392648048498543991simple-black-background.jpg);
+          box-shadow: black 10px 10px 10px;
+          background-repeat: no-repeat !important;
+          background-size: cover;
+        
 }
+
 .row{
     padding-top: 120px;
     

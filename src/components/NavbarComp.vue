@@ -76,13 +76,12 @@ box-shadow:white 10px 10px 10px ;
 }
 
 .navbar a.router-link-exact-active {
-  color: E3BC94;
   word-spacing: 0.5rem;
   text-decoration: none;
 
 }
 .btn{
-  border:solid 3px #E3BC94 ;
-  color:#E3BC94;
+  border:solid 3px white ;
+  color:white;
 }
 </style>
